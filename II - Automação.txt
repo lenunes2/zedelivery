@@ -1,0 +1,3 @@
+O teste automatizado foi realizado com o Robot framework pois é uma ferramenta de fácil reprodução, fácil entendimento e não necessita de uma linguagem 
+de programação específica. Também foi utilizado o BDD que está em alta no mercado. 
+Os fluxos críticos foram escolhidos pois são imprescindíveis nas vendas no Zé 

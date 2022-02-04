@@ -1,39 +1,28 @@
 1 - Primeiro acesso 
 
-Passo 01 - Acessar o app do Zé 
-Passo 02 - Clicar em entrar 
-Passo 03 - Clicar em quero criar uma conta 
-Passo 04 - Preencher nome e sobrenome 
-Passo 05 - Preencher e-mail 
-Passo 06 - Preencher a senha 
-Passo 07 - Preencher cpf
-Passo 08 - Preencher DD e Telefone 
-Passo 09 - Preencher data de nascimento 
-Passo 10 - Selecionar chekbox Declaro que li e aceito os termos e condições e a política de privacidade
-Passo 11 - Selecionar chekbox  Quero receber cupons de desconto e ofertas do Zé por e-mail e SMS
-Passo 12 - Selecionar criar conta com e-mail e senha 
-Passo 13 - Informe o codigo enviado ao telefone cadastrado
-Passo 14 - Pagina inicial é apresentada com sucesso 
-  
+DADO que estou no app do Zé 
+E Clico em entrar 
+E Clico em quero criar uma conta
+E Peeencho todos os campos de dados pessoais 
+E Seleciono o chekbox Declaro que li e aceito os termos e condições e a política de privacidade
+QUANDO Seleciono criar conta com e-mail e senha 
+E Informo o codigo enviado ao telefone cadastrado
+ENTÃO a página inicial é apresentado com sucesso
 
 2 - Adicionar produto ao carrinho
 
-Passo 01 - Realizar loggin 
-Passo 02 - Selecionar o produto desejado
-Passo 03 - Informar a quantidade desejada 
-Passo 04 - Clicar em adicionar
-Passo 05 - Clicar em ver sacola 
- 
+DADO Que estou logado no app
+QUANDO - Seleciono o produto desejado
+E - Informo a quantidade desejada
+E - Clicao em adicionar
+ENTÃO - O Produto é adicionado a sacola
+
 
 3 - Finalizar compra via cartão de credito 
-
-Passo 01 - Realizar loggin 
-Passo 02 - Selecionar o produto desejado
-Passo 03 - Informar a quantidade desejada 
-Passo 04 - Clicar em adicionar
-Passo 05 - Clicar em ver sacola 
-Passo 06 - Selecionar forma de pagamento 
-Passo 07 - Selecionar a opção cartão de crédito 
-Passo 08 - Clicar em finalizar compra 
-Passo 09 - Conferir o pedido 
-Passo 10 - È apresentado a tela para acompanhamento do pedido 
+DADO Que estou logado 
+E Possuo produtos na sacola 
+QUANDO Seleciono a forma de pagamento 
+E Selecionar a opção cartão de crédito 
+E Clico em finalizar compra 
+E Confiro pedido 
+ENTAO É apresentada a tela para acompanhamento do pedido

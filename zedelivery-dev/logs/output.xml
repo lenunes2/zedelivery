@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.1 on win32)" generated="20220204 15:58:42.110" rpa="false" schemaversion="2">
+<suite id="s1" name="Test" source="C:\Users\Laryssa Silva\Downloads\zedelivery-dev\zedelivery-dev\Tests\Test.robot">
+<kw name="Abrir navegador" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220204 15:58:42.305" level="INFO">Opening browser 'chrome' to base url 'https://ze.delivery/'.</msg>
+<status status="PASS" starttime="20220204 15:58:42.305" endtime="20220204 15:58:50.976"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220204 15:58:50.977" endtime="20220204 15:58:51.103"/>
+</kw>
+<status status="PASS" starttime="20220204 15:58:42.305" endtime="20220204 15:58:51.104"/>
+</kw>
+<test id="s1-t1" name="CSB-4776: Cadastrar usuário">
+<kw name="Dado que estou na pagina de Cadastro" library="cadastro">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220204 15:58:51.105" level="INFO">Clicking element '//*[@id="welcome-button-sign-in"]'.</msg>
+<status status="PASS" starttime="20220204 15:58:51.104" endtime="20220204 15:58:51.156"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnCriarConta}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220204 15:58:51.156" endtime="20220204 15:58:51.613"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cookies}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220204 15:58:51.613" endtime="20220204 15:58:51.640"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220204 15:58:51.641" level="INFO">Clicking element '//*[@id="onetrust-accept-btn-handler"]'.</msg>
+<status status="PASS" starttime="20220204 15:58:51.640" endtime="20220204 15:58:52.069"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220204 15:58:53.080" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220204 15:58:52.069" endtime="20220204 15:58:53.080"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>${btnCriarConta}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${btnCriarConta}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20220204 15:58:53.190" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220204 15:58:53.192" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=98.0.4758.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x009AFDC3+2555331]
+	Ordinal0 [0x009477F1+2127857]
+	Ordinal0 [0x00842CD0+1060048]
+	Ordinal0 [0x0089ECE6+1436902]
+	Ordinal0 [0x00887B0C+1342220]
+	Ordinal0 [0x008975FA+1406458]
+	Ordinal0 [0x00887976+1341814]
+	Ordinal0 [0x008636B6+1193654]
+	Ordinal0 [0x00864546+1197382]
+	GetHandleVerifier [0x00B49622+1619522]
+	GetHandleVerifier [0x00BF882C+2336844]
+	GetHandleVerifier [0x00A423E1+541697]
+	GetHandleVerifier [0x00A41443+537699]
+	Ordinal0 [0x0094D18E+2150798]
+	Ordinal0 [0x00951518+2168088]
+	Ordinal0 [0x00951660+2168416]
+	Ordinal0 [0x0095B330+2208560]
+	BaseThreadInitThunk [0x7666FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77D87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77D87A6E+238]
+</msg>
+<status status="FAIL" starttime="20220204 15:58:53.081" endtime="20220204 15:58:53.192"/>
+</kw>
+<status status="PASS" starttime="20220204 15:58:53.080" endtime="20220204 15:58:53.192"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCriarConta}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220204 15:58:53.192" level="INFO">Clicking element '//*[@id="create-account-link"]'.</msg>
+<status status="PASS" starttime="20220204 15:58:53.192" endtime="20220204 15:58:53.266"/>
+</kw>
+<status status="PASS" starttime="20220204 15:58:51.104" endtime="20220204 15:58:53.266"/>
+</kw>
+<kw name="Quando eu preencho todos os campos" library="cadastro">
+<kw name="Get File" library="OperatingSystem">
+<var>${file}</var>
+<arg>${EXECDIR}/Data/cadastro.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20220204 15:58:53.268" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Laryssa Silva\Downloads\zedelivery-dev\zedelivery-dev\Data\cadastro.json"&gt;C:\Users\Laryssa Silva\Downloads\zedelivery-dev\zedelivery-dev\Data\cadastro.json&lt;/a&gt;'.</msg>
+<msg timestamp="20220204 15:58:53.268" level="INFO">${file} = {
+    "Cadastro": {
+        "nome":   "Luiz Carlos",
+        "email":  "luiz2345678@hotmail.com",
+        "senha":  "123AAa!@#l4",
+        "cpf":    "417.190.850-72",
+        "cel":    "11985739198",
+...</msg>
+<status status="PASS" starttime="20220204 15:58:53.267" endtime="20220204 15:58:53.268"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${json_object}</var>
+<arg>json.loads($file)</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220204 15:58:53.272" level="INFO">${json_object} = {'Cadastro': {'nome': 'Luiz Carlos', 'email': 'luiz2345678@hotmail.com', 'senha': '123AAa!@#l4', 'cpf': '417.190.850-72', 'cel': '11985739198', 'dtNasc': '20/01/1954'}}</msg>
+<status status="PASS" starttime="20220204 15:58:53.268" endtime="20220204 15:58:53.272"/>
+</kw>
+<for flavor="IN">
+<var>${cadastro}</var>
+<value>${json_object['Cadastro']}</value>
+<iter>
+<var name="${cadastro}">{'nome': 'Luiz Carlos', 'email': 'luiz2345678@hotmail.com', 'senha': '123AAa!@#l4', 'cpf': '417.190.850-72', 'cel': '11985739198', 'dtNasc': '20/01/1954'}</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${nome}</arg>
+<arg>${cadastro['nome']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220204 15:58:53.273" level="INFO">Typing text 'Luiz Carlos' into text field '//*[@id="signup-form-input-name"]'.</msg>
+<status status="PASS" starttime="20220204 15:58:53.273" endtime="20220204 15:58:53.402"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email}</arg>
+<arg>${cadastro['email']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220204 15:58:53.403" level="INFO">Typing text 'luiz2345678@hotmail.com' into text field '//*[@id="signup-form-input-email"]'.</msg>
+<status status="PASS" starttime="20220204 15:58:53.402" endtime="20220204 15:58:53.551"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${senha}</arg>
+<arg>${cadastro['senha']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220204 15:58:53.552" level="INFO">Typing text '123AAa!@#l4' into text field '//*[@id="signup-form-input-password"]'.</msg>
+<status status="PASS" starttime="20220204 15:58:53.551" endtime="20220204 15:58:54.198"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cpf}</arg>
+<arg>${cadastro['cpf']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220204 15:58:54.199" level="INFO">Typing text '417.190.850-72' into text field '//*[@id="signup-form-input-document"]'.</msg>
+<status status="PASS" starttime="20220204 15:58:54.198" endtime="20220204 15:58:54.309"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cel}</arg>
+<arg>${cadastro['cel']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220204 15:58:54.309" level="INFO">Typing text '11985739198' into text field '//*[@id="signup-form-input-phone"]'.</msg>
+<status status="PASS" starttime="20220204 15:58:54.309" endtime="20220204 15:58:54.402"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${dtNasc}</arg>
+<arg>${cadastro['dtNasc']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220204 15:58:54.403" level="INFO">Typing text '20/01/1954' into text field '//*[@id="signup-form-input-age"]'.</msg>
+<status status="PASS" starttime="20220204 15:58:54.402" endtime="20220204 15:58:54.522"/>
+</kw>
+<status status="PASS" starttime="20220204 15:58:53.273" endtime="20220204 15:58:54.522"/>
+</iter>
+<status status="PASS" starttime="20220204 15:58:53.272" endtime="20220204 15:58:54.522"/>
+</for>
+<status status="PASS" starttime="20220204 15:58:53.267" endtime="20220204 15:58:54.522"/>
+</kw>
+<kw name="E seleciono o checkbox" library="cadastro">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>${termosCondicoes}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${termosCondicoes}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20220204 15:58:54.646" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220204 15:58:54.647" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=98.0.4758.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x009AFDC3+2555331]
+	Ordinal0 [0x009477F1+2127857]
+	Ordinal0 [0x00842CD0+1060048]
+	Ordinal0 [0x0089ECE6+1436902]
+	Ordinal0 [0x00887B0C+1342220]
+	Ordinal0 [0x008975FA+1406458]
+	Ordinal0 [0x00887976+1341814]
+	Ordinal0 [0x008636B6+1193654]
+	Ordinal0 [0x00864546+1197382]
+	GetHandleVerifier [0x00B49622+1619522]
+	GetHandleVerifier [0x00BF882C+2336844]
+	GetHandleVerifier [0x00A423E1+541697]
+	GetHandleVerifier [0x00A41443+537699]
+	Ordinal0 [0x0094D18E+2150798]
+	Ordinal0 [0x00951518+2168088]
+	Ordinal0 [0x00951660+2168416]
+	Ordinal0 [0x0095B330+2208560]
+	BaseThreadInitThunk [0x7666FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77D87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77D87A6E+238]
+</msg>
+<status status="FAIL" starttime="20220204 15:58:54.524" endtime="20220204 15:58:54.647"/>
+</kw>
+<status status="PASS" starttime="20220204 15:58:54.524" endtime="20220204 15:58:54.647"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${termosCondicoes}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220204 15:58:54.647" level="INFO">Selecting checkbox '//*[@id="sign-up-form-input-terms"]'.</msg>
+<msg timestamp="20220204 15:58:55.853" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220204 15:58:55.855" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (523, 745)
+  (Session info: chrome=98.0.4758.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x009AFDC3+2555331]
+	Ordinal0 [0x009477F1+2127857]
+	Ordinal0 [0x00842E08+1060360]
+	Ordinal0 [0x008748CF+1263823]
+	Ordinal0 [0x00872B10+1256208]
+	Ordinal0 [0x0087076B+1247083]
+	Ordinal0 [0x0086F559+1242457]
+	Ordinal0 [0x00864FB3+1200051]
+	Ordinal0 [0x00887B0C+1342220]
+	Ordinal0 [0x00864984+1198468]
+	Ordinal0 [0x00887C14+1342484]
+	Ordinal0 [0x008975FA+1406458]
+	Ordinal0 [0x00887976+1341814]
+	Ordinal0 [0x008636B6+1193654]
+	Ordinal0 [0x00864546+1197382]
+	GetHandleVerifier [0x00B49622+1619522]
+	GetHandleVerifier [0x00BF882C+2336844]
+	GetHandleVerifier [0x00A423E1+541697]
+	GetHandleVerifier [0x00A41443+537699]
+	Ordinal0 [0x0094D18E+2150798]
+	Ordinal0 [0x00951518+2168088]
+	Ordinal0 [0x00951660+2168416]
+	Ordinal0 [0x0095B330+2208560]
+	BaseThreadInitThunk [0x7666FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77D87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77D87A6E+238]
+</msg>
+<status status="FAIL" starttime="20220204 15:58:54.647" endtime="20220204 15:58:55.855"/>
+</kw>
+<status status="FAIL" starttime="20220204 15:58:54.523" endtime="20220204 15:58:55.855"/>
+</kw>
+<kw name="E clico no botão para criar conta" library="cadastro">
+<status status="NOT RUN" starttime="20220204 15:58:55.856" endtime="20220204 15:58:55.856"/>
+</kw>
+<doc>Cadastro Novo usuário</doc>
+<tag>CSB-4776</tag>
+<status status="FAIL" starttime="20220204 15:58:51.104" endtime="20220204 15:58:55.857">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (523, 745)
+  (Session info: chrome=98.0.4758.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x009AFDC3+2555331]
+	Ordinal0 [0x009477F1+2127857]
+	Ordinal0 [0x00842E08+1060360]
+	Ordinal0 [0x008748CF+1263823]
+	Ordinal0 [0x00872B10+1256208]
+	Ordinal0 [0x0087076B+1247083]
+	Ordinal0 [0x0086F559+1242457]
+	Ordinal0 [0x00864FB3+1200051]
+	Ordinal0 [0x00887B0C+1342220]
+	Ordinal0 [0x00864984+1198468]
+	Ordinal0 [0x00887C14+1342484]
+	Ordinal0 [0x008975FA+1406458]
+	Ordinal0 [0x00887976+1341814]
+	Ordinal0 [0x008636B6+1193654]
+	Ordinal0 [0x00864546+1197382]
+	GetHandleVerifier [0x00B49622+1619522]
+	GetHandleVerifier [0x00BF882C+2336844]
+	GetHandleVerifier [0x00A423E1+541697]
+	GetHandleVerifier [0x00A41443+537699]
+	Ordinal0 [0x0094D18E+2150798]
+	Ordinal0 [0x00951518+2168088]
+	Ordinal0 [0x00951660+2168416]
+	Ordinal0 [0x0095B330+2208560]
+	BaseThreadInitThunk [0x7666FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77D87A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77D87A6E+238]
+</status>
+</test>
+<kw name="Fechar navegador" library="resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220204 15:58:55.862" endtime="20220204 15:58:58.325"/>
+</kw>
+<status status="PASS" starttime="20220204 15:58:55.862" endtime="20220204 15:58:58.325"/>
+</kw>
+<status status="FAIL" starttime="20220204 15:58:42.112" endtime="20220204 15:58:58.325"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">CSB-4776</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
